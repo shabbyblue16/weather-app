@@ -30,4 +30,7 @@ module.exports = {
       template: path.join(__dirname, 'client', 'index.html'),
     }),
   ],
+  resolve: {
+    extensions: ['.js'],
+  },
 };
