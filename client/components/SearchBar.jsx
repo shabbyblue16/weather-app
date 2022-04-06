@@ -23,6 +23,7 @@ function SearchBar() {
         display: 'flex',
         alignItems: 'center',
         width: 400,
+        maxWidth: '100%',
       }}
     >
       <InputBase
