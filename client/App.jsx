@@ -10,9 +10,9 @@ import {
 function App() {
   return (
     <RecoilRoot>
-      <h1>Hello Weather</h1>
+      <h1>Hello weather</h1>
     </RecoilRoot>
-  )
+  );
 }
 
 export default App;

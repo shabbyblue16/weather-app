@@ -10,7 +10,7 @@ module.exports = {
     'eslint:recommended',
     'plugin:react/recommended',
   ],
-  ignorePatters: ['bundle.js'],
+  ignorePatterns: ['bundle.js'],
   // parserOptions: {
   //   ecmaFeatures: {
   //     jsx: true,
@@ -24,9 +24,10 @@ module.exports = {
   rules: {
     'no-undef': 0,
     'no-console': 0,
+    'no-unused-vars': 0,
     'react/forbid-prop-types': 0,
   },
-  setting: {
+  settings: {
     react: {
       version: 'detect',
     },
