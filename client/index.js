@@ -1,7 +1,9 @@
+/* eslint-disable import/extensions */
+/* eslint-disable react/jsx-filename-extension */
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
+import App from './App.jsx';
 
-ReactDOM.render(
-  <h1>Hello Weather</h1>,
-  document.getElementById('root')
-);
+const root = createRoot(document.getElementById('root'));
+
+root.render(<App />);
