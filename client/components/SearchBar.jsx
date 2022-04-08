@@ -1,18 +1,30 @@
 import * as React from 'react';
+import { useQuery } from 'react-query';
+import { useSetRecoilState } from 'recoil';
+import axios from 'axios';
 import Paper from '@mui/material/Paper';
 import InputBase from '@mui/material/InputBase';
 import IconButton from '@mui/material/IconButton';
 import SearchIcon from '@mui/icons-material/Search';
+import useApiCall from './queries';
+import { enabledState } from './state';
 
 function SearchBar() {
-  const [zipCode, setZipCode] = React.useState('');
+  const [input, setInput] = React.useState('');
+  const isEnabled = useSetRecoilState(enabledState);
 
   const handleInput = (e) => {
-    setZipCode(e.target.value);
+    setInput(e.target.value);
+    if (input.length === 5) {
+      isEnabled(true);
+    } else {
+      isEnabled(false);
+    }
   };
 
-  const handleSearch = () => {
-    console.log(zipCode);
+  const useSearch = () => {
+    console.log(input);
+    // useApiCall(input);
   };
 
   return (
@@ -28,11 +40,12 @@ function SearchBar() {
     >
       <InputBase
         placeholder='Search ZIP Codes'
+        value={input}
         onChange={handleInput}
         sx={{ ml: 1, flex: 1 }}
       />
       <IconButton
-        onClick={handleSearch}
+        onClick={useSearch}
         sx={{ p: '10px' }}
         aria-label='search'
       >

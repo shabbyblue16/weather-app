@@ -15,6 +15,11 @@ app.use((req, res, next) => {
   next();
 });
 
+app.get('/weather/:zip?', (req, res) => {
+  const { zip } = req.params;
+  console.log(zip);
+});
+
 app.listen(3003, () => {
   console.log('Connected to server at port 3003...');
 });
