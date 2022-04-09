@@ -23,8 +23,7 @@ function SearchBar() {
   };
 
   const useSearch = () => {
-    console.log(input);
-    // useApiCall(input);
+    useApiCall(input);
   };
 
   return (
