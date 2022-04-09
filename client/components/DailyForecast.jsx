@@ -1,8 +1,12 @@
 import * as React from 'react';
+import { useRecoilState } from 'recoil';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
+import { dailyForecastState } from './state';
 
 function DailyForecast() {
+  const dailyForecast = useRecoilState(dailyForecastState);
+
   return (
     <Box sx={{ background: 'blue' }}>
       <Grid container direction='column'>

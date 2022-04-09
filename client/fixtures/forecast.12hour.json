@@ -1,0 +1,194 @@
+[
+  {
+    "DateTime": "2022-04-07T23:00:00-04:00",
+    "EpochDateTime": 1649386800,
+    "WeatherIcon": 35,
+    "IconPhrase": "Partly cloudy",
+    "HasPrecipitation": false,
+    "IsDaylight": false,
+    "Temperature": {
+      "Value": 48,
+      "Unit": "F",
+      "UnitType": 18
+    },
+    "PrecipitationProbability": 0,
+    "MobileLink": "http://www.accuweather.com/en/us/black-mountain-nc/28711/hourly-weather-forecast/12117_pc?day=1&hbhhour=23&lang=en-us",
+    "Link": "http://www.accuweather.com/en/us/black-mountain-nc/28711/hourly-weather-forecast/12117_pc?day=1&hbhhour=23&lang=en-us"
+  },
+  {
+    "DateTime": "2022-04-08T00:00:00-04:00",
+    "EpochDateTime": 1649390400,
+    "WeatherIcon": 35,
+    "IconPhrase": "Partly cloudy",
+    "HasPrecipitation": false,
+    "IsDaylight": false,
+    "Temperature": {
+      "Value": 46,
+      "Unit": "F",
+      "UnitType": 18
+    },
+    "PrecipitationProbability": 0,
+    "MobileLink": "http://www.accuweather.com/en/us/black-mountain-nc/28711/hourly-weather-forecast/12117_pc?day=2&hbhhour=0&lang=en-us",
+    "Link": "http://www.accuweather.com/en/us/black-mountain-nc/28711/hourly-weather-forecast/12117_pc?day=2&hbhhour=0&lang=en-us"
+  },
+  {
+    "DateTime": "2022-04-08T01:00:00-04:00",
+    "EpochDateTime": 1649394000,
+    "WeatherIcon": 35,
+    "IconPhrase": "Partly cloudy",
+    "HasPrecipitation": false,
+    "IsDaylight": false,
+    "Temperature": {
+      "Value": 44,
+      "Unit": "F",
+      "UnitType": 18
+    },
+    "PrecipitationProbability": 0,
+    "MobileLink": "http://www.accuweather.com/en/us/black-mountain-nc/28711/hourly-weather-forecast/12117_pc?day=2&hbhhour=1&lang=en-us",
+    "Link": "http://www.accuweather.com/en/us/black-mountain-nc/28711/hourly-weather-forecast/12117_pc?day=2&hbhhour=1&lang=en-us"
+  },
+  {
+    "DateTime": "2022-04-08T02:00:00-04:00",
+    "EpochDateTime": 1649397600,
+    "WeatherIcon": 35,
+    "IconPhrase": "Partly cloudy",
+    "HasPrecipitation": false,
+    "IsDaylight": false,
+    "Temperature": {
+      "Value": 42,
+      "Unit": "F",
+      "UnitType": 18
+    },
+    "PrecipitationProbability": 1,
+    "MobileLink": "http://www.accuweather.com/en/us/black-mountain-nc/28711/hourly-weather-forecast/12117_pc?day=2&hbhhour=2&lang=en-us",
+    "Link": "http://www.accuweather.com/en/us/black-mountain-nc/28711/hourly-weather-forecast/12117_pc?day=2&hbhhour=2&lang=en-us"
+  },
+  {
+    "DateTime": "2022-04-08T03:00:00-04:00",
+    "EpochDateTime": 1649401200,
+    "WeatherIcon": 35,
+    "IconPhrase": "Partly cloudy",
+    "HasPrecipitation": false,
+    "IsDaylight": false,
+    "Temperature": {
+      "Value": 41,
+      "Unit": "F",
+      "UnitType": 18
+    },
+    "PrecipitationProbability": 1,
+    "MobileLink": "http://www.accuweather.com/en/us/black-mountain-nc/28711/hourly-weather-forecast/12117_pc?day=2&hbhhour=3&lang=en-us",
+    "Link": "http://www.accuweather.com/en/us/black-mountain-nc/28711/hourly-weather-forecast/12117_pc?day=2&hbhhour=3&lang=en-us"
+  },
+  {
+    "DateTime": "2022-04-08T04:00:00-04:00",
+    "EpochDateTime": 1649404800,
+    "WeatherIcon": 36,
+    "IconPhrase": "Intermittent clouds",
+    "HasPrecipitation": false,
+    "IsDaylight": false,
+    "Temperature": {
+      "Value": 40,
+      "Unit": "F",
+      "UnitType": 18
+    },
+    "PrecipitationProbability": 1,
+    "MobileLink": "http://www.accuweather.com/en/us/black-mountain-nc/28711/hourly-weather-forecast/12117_pc?day=2&hbhhour=4&lang=en-us",
+    "Link": "http://www.accuweather.com/en/us/black-mountain-nc/28711/hourly-weather-forecast/12117_pc?day=2&hbhhour=4&lang=en-us"
+  },
+  {
+    "DateTime": "2022-04-08T05:00:00-04:00",
+    "EpochDateTime": 1649408400,
+    "WeatherIcon": 36,
+    "IconPhrase": "Intermittent clouds",
+    "HasPrecipitation": false,
+    "IsDaylight": false,
+    "Temperature": {
+      "Value": 38,
+      "Unit": "F",
+      "UnitType": 18
+    },
+    "PrecipitationProbability": 1,
+    "MobileLink": "http://www.accuweather.com/en/us/black-mountain-nc/28711/hourly-weather-forecast/12117_pc?day=2&hbhhour=5&lang=en-us",
+    "Link": "http://www.accuweather.com/en/us/black-mountain-nc/28711/hourly-weather-forecast/12117_pc?day=2&hbhhour=5&lang=en-us"
+  },
+  {
+    "DateTime": "2022-04-08T06:00:00-04:00",
+    "EpochDateTime": 1649412000,
+    "WeatherIcon": 36,
+    "IconPhrase": "Intermittent clouds",
+    "HasPrecipitation": false,
+    "IsDaylight": false,
+    "Temperature": {
+      "Value": 37,
+      "Unit": "F",
+      "UnitType": 18
+    },
+    "PrecipitationProbability": 1,
+    "MobileLink": "http://www.accuweather.com/en/us/black-mountain-nc/28711/hourly-weather-forecast/12117_pc?day=2&hbhhour=6&lang=en-us",
+    "Link": "http://www.accuweather.com/en/us/black-mountain-nc/28711/hourly-weather-forecast/12117_pc?day=2&hbhhour=6&lang=en-us"
+  },
+  {
+    "DateTime": "2022-04-08T07:00:00-04:00",
+    "EpochDateTime": 1649415600,
+    "WeatherIcon": 36,
+    "IconPhrase": "Intermittent clouds",
+    "HasPrecipitation": false,
+    "IsDaylight": false,
+    "Temperature": {
+      "Value": 36,
+      "Unit": "F",
+      "UnitType": 18
+    },
+    "PrecipitationProbability": 3,
+    "MobileLink": "http://www.accuweather.com/en/us/black-mountain-nc/28711/hourly-weather-forecast/12117_pc?day=2&hbhhour=7&lang=en-us",
+    "Link": "http://www.accuweather.com/en/us/black-mountain-nc/28711/hourly-weather-forecast/12117_pc?day=2&hbhhour=7&lang=en-us"
+  },
+  {
+    "DateTime": "2022-04-08T08:00:00-04:00",
+    "EpochDateTime": 1649419200,
+    "WeatherIcon": 4,
+    "IconPhrase": "Intermittent clouds",
+    "HasPrecipitation": false,
+    "IsDaylight": true,
+    "Temperature": {
+      "Value": 39,
+      "Unit": "F",
+      "UnitType": 18
+    },
+    "PrecipitationProbability": 7,
+    "MobileLink": "http://www.accuweather.com/en/us/black-mountain-nc/28711/hourly-weather-forecast/12117_pc?day=2&hbhhour=8&lang=en-us",
+    "Link": "http://www.accuweather.com/en/us/black-mountain-nc/28711/hourly-weather-forecast/12117_pc?day=2&hbhhour=8&lang=en-us"
+  },
+  {
+    "DateTime": "2022-04-08T09:00:00-04:00",
+    "EpochDateTime": 1649422800,
+    "WeatherIcon": 4,
+    "IconPhrase": "Intermittent clouds",
+    "HasPrecipitation": false,
+    "IsDaylight": true,
+    "Temperature": {
+      "Value": 41,
+      "Unit": "F",
+      "UnitType": 18
+    },
+    "PrecipitationProbability": 7,
+    "MobileLink": "http://www.accuweather.com/en/us/black-mountain-nc/28711/hourly-weather-forecast/12117_pc?day=2&hbhhour=9&lang=en-us",
+    "Link": "http://www.accuweather.com/en/us/black-mountain-nc/28711/hourly-weather-forecast/12117_pc?day=2&hbhhour=9&lang=en-us"
+  },
+  {
+    "DateTime": "2022-04-08T10:00:00-04:00",
+    "EpochDateTime": 1649426400,
+    "WeatherIcon": 4,
+    "IconPhrase": "Intermittent clouds",
+    "HasPrecipitation": false,
+    "IsDaylight": true,
+    "Temperature": {
+      "Value": 44,
+      "Unit": "F",
+      "UnitType": 18
+    },
+    "PrecipitationProbability": 6,
+    "MobileLink": "http://www.accuweather.com/en/us/black-mountain-nc/28711/hourly-weather-forecast/12117_pc?day=2&hbhhour=10&lang=en-us",
+    "Link": "http://www.accuweather.com/en/us/black-mountain-nc/28711/hourly-weather-forecast/12117_pc?day=2&hbhhour=10&lang=en-us"
+  }
+]
