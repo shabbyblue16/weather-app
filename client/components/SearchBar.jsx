@@ -31,20 +31,19 @@ function SearchBar() {
       sx={{
         p: '2px 4px',
         display: 'flex',
-        alignItems: 'center',
-        width: 400,
         maxWidth: '100%',
+        background: 'transparent',
       }}
     >
       <InputBase
         placeholder='Search 5-digit ZIP Codes'
         value={input}
         onChange={handleInput}
-        sx={{ ml: 1, flex: 1 }}
+        sx={{ ml: 1, flex: 1, color: 'white' }}
       />
       <IconButton
         onClick={handleSearch}
-        sx={{ p: '10px' }}
+        sx={{ p: '10px', color: 'white' }}
         aria-label='search'
       >
         <SearchIcon />

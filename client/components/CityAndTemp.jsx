@@ -29,17 +29,20 @@ function CityAndTemp() {
     <Container component='div'>
       <Grid container direction='column' alignItems='center' sx={{ color: 'white' }}>
         <Grid item>
-          <Typography variant='h4' gutterBottom>
+          <Typography variant='h6' gutterBottom>
             {data.location.EnglishName}
+            {', '}
+            {data.location.AdministrativeArea.EnglishName}
           </Typography>
         </Grid>
         <Grid item>
-          <Typography variant='h1' gutterBottom>
+          <Typography variant='h1'>
             {data.hourlyForecast[0].Temperature.Value}
+            &deg;
           </Typography>
         </Grid>
         <Grid item>
-          <Typography variant='h4'>
+          <Typography variant='h6'>
             {data.hourlyForecast[0].IconPhrase}
           </Typography>
         </Grid>
