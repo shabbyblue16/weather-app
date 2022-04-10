@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { QueryClient, QueryClientProvider } from 'react-query';
+import { ReactQueryDevtools } from 'react-query/devtools';
 import {
   RecoilRoot,
   atom,
@@ -27,6 +28,7 @@ function App() {
             </Grid>
           </Grid>
         </Box>
+        <ReactQueryDevtools initialIsOpen />
       </QueryClientProvider>
     </RecoilRoot>
   );

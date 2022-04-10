@@ -1,38 +1,21 @@
 import { useQuery } from 'react-query';
-import { useSetRecoilState } from 'recoil';
+import { useRecoilState } from 'recoil';
 import axios from 'axios';
-import {
-  cityState,
-  dailyForecastState,
-  hourlyForecastState,
-  errorState,
-  isLoadingState,
-  enabledState,
-} from './state';
+import { enabledState, zipCodeState } from './state';
 
-const fetchWeather = async (zip) => {
+async function fetchWeather(zipcode) {
   const { data } = await axios.get(
-    `http://localhost:3003/weather/${zip}`,
+    `http://localhost:3003/weather/${zipcode}`,
   );
   return data;
-};
+}
 
-export default function useApiCall(zipCode) {
-  const setCity = useSetRecoilState(cityState);
-  const setDailyForecast = useSetRecoilState(dailyForecastState);
-  const setHourlyForecast = useSetRecoilState(hourlyForecastState);
-  const setError = useSetRecoilState(errorState);
-  const setIsLoading = useSetRecoilState(isLoadingState);
-
-  const { data, isLoading, error } = useQuery(
+export default function useApiCall() {
+  const [zipCode, setZipcode] = useRecoilState(zipCodeState);
+  const [enabled, setEnabled] = useRecoilState(enabledState);
+  return useQuery(
     ['local-weather', zipCode],
     () => fetchWeather(zipCode),
-    { enabled: enabledState },
+    { enabled },
   );
-
-  setCity(data.cityName);
-  setDailyForecast(data.dailyForecast);
-  setHourlyForecast(data.hourlyForecast);
-  setError(error);
-  setIsLoading(isLoading);
 }

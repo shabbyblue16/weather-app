@@ -18,27 +18,29 @@ app.use((req, res, next) => {
 
 app.get('/weather/:zip?', (req, res) => {
   const { zip } = req.params;
-  const response = {};
-  let locationKey;
+  if (zip) {
+    const response = {};
+    let locationKey;
 
-  getLocationKey(zip)
-    .then((data) => {
-      response.location = data;
-      locationKey = data[0].Key;
-      return getForecast(locationKey, 'daily');
-    })
-    .then((data) => {
-      response.dailyForecast = data;
-      return getForecast(locationKey, 'hourly');
-    })
-    .then((data) => {
-      response.hourlyForecast = data;
-      res.status(200).json(response);
-    })
-    .catch((err) => {
-      console.log(err);
-      res.status(400).send(err);
-    });
+    getLocationKey(zip)
+      .then((data) => {
+        [response.location] = data;
+        locationKey = data[0].Key;
+        return getForecast(locationKey, 'daily');
+      })
+      .then((data) => {
+        response.dailyForecast = data;
+        return getForecast(locationKey, 'hourly');
+      })
+      .then((data) => {
+        response.hourlyForecast = data;
+        res.status(200).json(response);
+      })
+      .catch((err) => {
+        console.log(err);
+        res.status(400).send(err);
+      });
+  }
 });
 
 app.listen(3003, () => {

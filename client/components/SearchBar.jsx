@@ -1,29 +1,26 @@
 import * as React from 'react';
-import { useQuery } from 'react-query';
-import { useSetRecoilState } from 'recoil';
-import axios from 'axios';
+import { useRecoilState } from 'recoil';
 import Paper from '@mui/material/Paper';
 import InputBase from '@mui/material/InputBase';
 import IconButton from '@mui/material/IconButton';
 import SearchIcon from '@mui/icons-material/Search';
-import useApiCall from './queries';
-import { enabledState } from './state';
+import { enabledState, zipCodeState } from './state';
 
 function SearchBar() {
-  const [input, setInput] = React.useState('');
-  const isEnabled = useSetRecoilState(enabledState);
+  const [zipCode, setZipCode] = useRecoilState(zipCodeState);
+  const [isEnabled, setIsEnabled] = useRecoilState(enabledState);
 
   const handleInput = (e) => {
-    setInput(e.target.value);
-    if (input.length === 5) {
-      isEnabled(true);
-    } else {
-      isEnabled(false);
-    }
+    setZipCode(e.target.value);
   };
 
-  const useSearch = () => {
-    useApiCall(input);
+  const handleSearch = (e) => {
+    e.preventDefault();
+    if (zipCode.length === 5) {
+      setIsEnabled(true);
+    } else {
+      setIsEnabled(false);
+    }
   };
 
   return (
@@ -39,12 +36,12 @@ function SearchBar() {
     >
       <InputBase
         placeholder='Search ZIP Codes'
-        value={input}
+        value={zipCode}
         onChange={handleInput}
         sx={{ ml: 1, flex: 1 }}
       />
       <IconButton
-        onClick={useSearch}
+        onClick={handleSearch}
         sx={{ p: '10px' }}
         aria-label='search'
       >
