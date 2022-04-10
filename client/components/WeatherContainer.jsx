@@ -5,8 +5,6 @@ import DailyForecast from './DailyForecast';
 import useApiCall from './queries';
 
 function WeatherContainer() {
-  const { data, isLoading, error } = useApiCall();
-
   return (
     <Box component='div'>
       <div>weather container</div>

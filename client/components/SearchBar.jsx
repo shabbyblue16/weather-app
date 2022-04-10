@@ -7,16 +7,18 @@ import SearchIcon from '@mui/icons-material/Search';
 import { enabledState, zipCodeState } from './state';
 
 function SearchBar() {
+  const [input, setInput] = React.useState('');
   const [zipCode, setZipCode] = useRecoilState(zipCodeState);
   const [isEnabled, setIsEnabled] = useRecoilState(enabledState);
 
   const handleInput = (e) => {
-    setZipCode(e.target.value);
+    setInput(e.target.value);
   };
 
   const handleSearch = (e) => {
     e.preventDefault();
-    if (zipCode.length === 5) {
+    if (input.length === 5) {
+      setZipCode(input);
       setIsEnabled(true);
     } else {
       setIsEnabled(false);
@@ -35,8 +37,8 @@ function SearchBar() {
       }}
     >
       <InputBase
-        placeholder='Search ZIP Codes'
-        value={zipCode}
+        placeholder='Search 5-digit ZIP Codes'
+        value={input}
         onChange={handleInput}
         sx={{ ml: 1, flex: 1 }}
       />
