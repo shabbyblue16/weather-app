@@ -1,11 +1,14 @@
 import * as React from 'react';
-import { useRecoilState } from 'recoil';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
-import { cityState } from './state';
+import useApiCall from './queries';
 
 function CityAndTemp() {
-  const city = useRecoilState(cityState);
+  const { data, isLoading, error } = useApiCall();
+
+  if (isLoading) return 'Loading...';
+
+  if (error) return `An error has occured: ${error.message}`;
 
   return (
     <Container component='div'>
