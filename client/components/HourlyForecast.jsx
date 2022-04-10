@@ -2,20 +2,22 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import useApiCall from './queries';
+import hourlyForecast from './fixtures/hourlyForecast.json';
 
 function HourlyForecast() {
-  const {
-    data,
-    isLoading,
-    error,
-    isIdle,
-  } = useApiCall();
+  // const {
+  //   data,
+  //   isLoading,
+  //   error,
+  //   isIdle,
+  // } = useApiCall();
 
-  if (isLoading) return 'Loading...';
+  // if (isLoading) return 'Loading...';
 
-  if (error) return `An error has occured: ${error.message}`;
+  // if (error) return `An error has occured: ${error.message}`;
 
-  if (isIdle) return <div>Enter ZipCode</div>;
+  // if (isIdle) return <div>Enter ZipCode</div>;
+  const data = { hourlyForecast };
 
   return (
     <Box sx={{ background: 'grey' }}>

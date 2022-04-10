@@ -2,20 +2,22 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import useApiCall from './queries';
+import dailyForecast from './fixtures/dailyForecast.json';
 
 function DailyForecast() {
-  const {
-    data,
-    isLoading,
-    error,
-    isIdle,
-  } = useApiCall();
+  // const {
+  //   data,
+  //   isLoading,
+  //   error,
+  //   isIdle,
+  // } = useApiCall();
 
-  if (isLoading) return 'Loading...';
+  // if (isLoading) return 'Loading...';
 
-  if (error) return `An error has occured: ${error.message}`;
+  // if (error) return `An error has occured: ${error.message}`;
 
-  if (isIdle) return <div>Daily Weather</div>;
+  // if (isIdle) return <div>Daily Weather</div>;
+  const data = { dailyForecast };
 
   return (
     <Box sx={{ background: 'blue' }}>
