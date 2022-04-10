@@ -24,10 +24,10 @@ function CityAndTemp() {
           <div>{data.location.EnglishName}</div>
         </Grid>
         <Grid item>
-          <div>Temp</div>
+          <div>{data.hourlyForecast[0].Temperature.Value}</div>
         </Grid>
         <Grid item>
-          <div>Weather</div>
+          <div>{data.hourlyForecast[0].IconPhrase}</div>
         </Grid>
       </Grid>
     </Container>
