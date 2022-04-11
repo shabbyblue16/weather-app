@@ -1,39 +1,56 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
+import Icon from '@mui/material/Icon';
 import useApiCall from './queries';
+import hourlyForecast from './fixtures/hourlyForecast.json';
 
 function HourlyForecast() {
-  const {
-    data,
-    isLoading,
-    error,
-    isIdle,
-  } = useApiCall();
+  // const {
+  //   data,
+  //   isLoading,
+  //   error,
+  //   isIdle,
+  // } = useApiCall();
 
-  if (isLoading) return 'Loading...';
+  // if (isLoading) return 'Loading...';
 
-  if (error) return `An error has occured: ${error.message}`;
+  // if (error) return `An error has occured: ${error.message}`;
 
-  if (isIdle) return <div>Enter ZipCode</div>;
+  // if (isIdle) return <div>Enter ZipCode</div>;
+  const data = { hourlyForecast };
 
   return (
-    <Box sx={{ background: 'grey' }}>
-      <Grid container>
+    <Box sx={{
+      p: 2,
+      mr: 10,
+      background: 'rgb(0, 0, 0, 0.5)',
+    }}
+    >
+      <Grid container columns={16}>
         {data.hourlyForecast.map((hour) => (
-          <Grid key={hour.EpochDateTime} item>
-            <Grid container direction='column'>
+          <Grid key={hour.EpochDateTime} xs={2} item>
+            <Grid container direction='column' spacing={1} alignItems='center'>
               <Grid item>
-                <div>{hour.DateTime}</div>
+                {/* <Typography>{hour.DateTime}</Typography> */}
+                <Typography variant='h5'>3PM</Typography>
               </Grid>
               <Grid item>
-                <div>{hour.IconPhrase}</div>
+                <img alt='icon' src='https://developer.accuweather.com/sites/default/files/01-s.png' />
+                {/* <Typography>{hour.WeatherIcon}</Typography> */}
               </Grid>
               <Grid item>
-                <div>{hour.Temperature.Value}</div>
+                <Typography variant='h5'>
+                  {hour.Temperature.Value}
+                  &deg;
+                </Typography>
               </Grid>
               <Grid item>
-                <div>{hour.PrecipitationProbability}</div>
+                <Typography variant='h5' color='blue'>
+                  {hour.PrecipitationProbability}
+                  %
+                </Typography>
               </Grid>
             </Grid>
           </Grid>

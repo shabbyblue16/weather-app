@@ -6,8 +6,13 @@ import useApiCall from './queries';
 
 function WeatherContainer() {
   return (
-    <Box component='div'>
-      <div>weather container</div>
+    <Box
+      component='div'
+      sx={{
+        mt: 5,
+        color: 'white',
+      }}
+    >
       <HourlyForecast />
       <DailyForecast />
     </Box>
