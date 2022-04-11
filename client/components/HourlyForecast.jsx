@@ -22,27 +22,32 @@ function HourlyForecast() {
   const data = { hourlyForecast };
 
   return (
-    <Box>
-      <Grid container>
+    <Box sx={{
+      p: 2,
+      mr: 10,
+      background: 'rgb(0, 0, 0, 0.5)',
+    }}
+    >
+      <Grid container columns={16}>
         {data.hourlyForecast.map((hour) => (
-          <Grid key={hour.EpochDateTime} item>
-            <Grid container direction='column' alignItems='center'>
+          <Grid key={hour.EpochDateTime} xs={2} item>
+            <Grid container direction='column' spacing={1} alignItems='center'>
               <Grid item>
                 {/* <Typography>{hour.DateTime}</Typography> */}
-                <Typography>3PM</Typography>
+                <Typography variant='h5'>3PM</Typography>
               </Grid>
               <Grid item>
                 <img alt='icon' src='https://developer.accuweather.com/sites/default/files/01-s.png' />
                 {/* <Typography>{hour.WeatherIcon}</Typography> */}
               </Grid>
               <Grid item>
-                <Typography>
+                <Typography variant='h5'>
                   {hour.Temperature.Value}
                   &deg;
                 </Typography>
               </Grid>
               <Grid item>
-                <Typography color='blue'>
+                <Typography variant='h5' color='blue'>
                   {hour.PrecipitationProbability}
                   %
                 </Typography>
