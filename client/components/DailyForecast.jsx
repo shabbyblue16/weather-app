@@ -20,7 +20,7 @@ function DailyForecast() {
   const data = { dailyForecast };
 
   return (
-    <Box sx={{ background: 'blue' }}>
+    <Box sx={{ mt: 10, background: 'black' }}>
       <Grid container direction='column'>
         {data.dailyForecast.DailyForecasts.map((day) => (
           <Grid key={day.EpochDate} item>

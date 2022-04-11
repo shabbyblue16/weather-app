@@ -1,6 +1,8 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
+import Icon from '@mui/material/Icon';
 import useApiCall from './queries';
 import hourlyForecast from './fixtures/hourlyForecast.json';
 
@@ -20,22 +22,30 @@ function HourlyForecast() {
   const data = { hourlyForecast };
 
   return (
-    <Box sx={{ background: 'grey' }}>
+    <Box>
       <Grid container>
         {data.hourlyForecast.map((hour) => (
           <Grid key={hour.EpochDateTime} item>
-            <Grid container direction='column'>
+            <Grid container direction='column' alignItems='center'>
               <Grid item>
-                <div>{hour.DateTime}</div>
+                {/* <Typography>{hour.DateTime}</Typography> */}
+                <Typography>3PM</Typography>
               </Grid>
               <Grid item>
-                <div>{hour.IconPhrase}</div>
+                <img alt='icon' src='https://developer.accuweather.com/sites/default/files/01-s.png' />
+                {/* <Typography>{hour.WeatherIcon}</Typography> */}
               </Grid>
               <Grid item>
-                <div>{hour.Temperature.Value}</div>
+                <Typography>
+                  {hour.Temperature.Value}
+                  &deg;
+                </Typography>
               </Grid>
               <Grid item>
-                <div>{hour.PrecipitationProbability}</div>
+                <Typography color='blue'>
+                  {hour.PrecipitationProbability}
+                  %
+                </Typography>
               </Grid>
             </Grid>
           </Grid>
