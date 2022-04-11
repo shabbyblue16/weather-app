@@ -25,8 +25,19 @@ function HourModel(data) {
   const hourly = data.slice(0, 8);
   const hourlyForecast = hourly.map((hour) => {
     const WeatherIcon = hour.WeatherIcon < 10 ? `0${hour.WeatherIcon}-s.png` : `${hour.WeatherIcon}-s.png`;
+    const NewTime = new Date(hour.DateTime).getHours();
+    let Time;
+    if (NewTime === 0) {
+      Time = `${NewTime + 12}AM`;
+    } else if (NewTime === 12) {
+      Time = `${NewTime}PM`;
+    } else if (NewTime < 12) {
+      Time = `${NewTime}AM`;
+    } else {
+      Time = `${NewTime % 12}PM`;
+    }
     const sanitizedHour = {
-      Time: new Date(hour.DateTime).getHours(),
+      Time,
       TemperatureValue: hour.Temperature.Value,
       IconPhrase: hour.IconPhrase,
       WeatherIcon: `${iconUrl}/${WeatherIcon}`,
