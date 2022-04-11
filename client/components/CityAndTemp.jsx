@@ -3,8 +3,6 @@ import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import useApiCall from './queries';
-import hourlyForecast from './fixtures/hourlyForecast.json';
-import location from './fixtures/location.json';
 
 function CityAndTemp() {
   const {
@@ -14,16 +12,7 @@ function CityAndTemp() {
     error,
   } = useApiCall();
 
-  if (isLoading) return <Typography>Loading...</Typography>;
-
-  if (error) return `An error has occured: ${error.message}`;
-
-  if (isIdle) return <div />;
-
-  // const data = {
-  //   location,
-  //   hourlyForecast,
-  // };
+  if (isLoading || error || isIdle) return <div />;
 
   return (
     <Container component='div'>

@@ -1,6 +1,6 @@
 const path = require('path');
 const express = require('express');
-const getWeather = require('./controllers');
+const fetchWeather = require('./controllers');
 
 const app = express();
 app.use('/', express.static(path.join(__dirname, '/../client/dist')));
@@ -19,7 +19,7 @@ app.use((req, res, next) => {
 app.get('/weather/:zip?', (req, res) => {
   const { zip } = req.params;
   if (zip) {
-    getWeather(req, res, zip);
+    fetchWeather(req, res, zip);
   }
 });
 

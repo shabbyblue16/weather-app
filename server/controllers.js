@@ -1,4 +1,5 @@
 const { getLocationKey, getForecast } = require('./helpers');
+const { DayModel, HourModel } = require('./models');
 
 function fetchWeather(req, res, zip) {
   const response = {};
@@ -14,37 +15,18 @@ function fetchWeather(req, res, zip) {
       return getForecast(locationKey, 'daily');
     })
     .then((data) => {
-      const dailyForecast = data.DailyForecasts.map((day) => {
-        const sanitizedDay = {
-          Date: new Date(day.Date).getDay(),
-          DayIcon: `https://developer.accuweather.com/sites/default/files/${day.Day.Icon}-s.png`,
-          NightIcon: `https://developer.accuweather.com/sites/default/files/${day.Night.Icon}-s.png`,
-          TemperatureMaxVal: day.Temperature.Maximum.Value,
-          TemperatureMinVal: day.Temperature.Minimum.Value,
-        };
-        return sanitizedDay;
-      });
+      const dailyForecast = DayModel(data);
       response.dailyForecast = dailyForecast;
       return getForecast(locationKey, 'hourly');
     })
     .then((data) => {
-      const hourly = data.slice(0, 8);
-      const hourlyForecast = hourly.map((hour) => {
-        const sanitizedHour = {
-          Time: new Date(hour.DateTime).getHours(),
-          TemperatureValue: hour.Temperature.Value,
-          IconPhrase: hour.IconPhrase,
-          WeatherIcon: `https://developer.accuweather.com/sites/default/files/${hour.WeatherIcon}-s.png`,
-          PrecipitationProbability: hour.PrecipitationProbability,
-        };
-        return sanitizedHour;
-      });
+      const hourlyForecast = HourModel(data);
       response.hourlyForecast = hourlyForecast;
       res.status(200).json(response);
     })
     .catch((err) => {
       console.log(err);
-      res.status(400).send(err);
+      res.status(503).send(err);
     });
 }
 
