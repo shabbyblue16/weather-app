@@ -4,22 +4,19 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Icon from '@mui/material/Icon';
 import useApiCall from './queries';
-import hourlyForecast from './fixtures/hourlyForecast.json';
+import HourItem from './HourItem';
 
 function HourlyForecast() {
-  // const {
-  //   data,
-  //   isLoading,
-  //   error,
-  //   isIdle,
-  // } = useApiCall();
+  const {
+    data,
+    isLoading,
+    error,
+    isIdle,
+  } = useApiCall();
 
-  // if (isLoading) return 'Loading...';
+  if (isIdle || isLoading) return <Typography variant='h4'>Weather App</Typography>;
 
-  // if (error) return `An error has occured: ${error.message}`;
-
-  // if (isIdle) return <div>Enter ZipCode</div>;
-  const data = { hourlyForecast };
+  if (error) return <div />;
 
   return (
     <Box sx={{
@@ -30,29 +27,8 @@ function HourlyForecast() {
     >
       <Grid container columns={16}>
         {data.hourlyForecast.map((hour) => (
-          <Grid key={hour.EpochDateTime} xs={2} item>
-            <Grid container direction='column' spacing={1} alignItems='center'>
-              <Grid item>
-                {/* <Typography>{hour.DateTime}</Typography> */}
-                <Typography variant='h5'>3PM</Typography>
-              </Grid>
-              <Grid item>
-                <img alt='icon' src='https://developer.accuweather.com/sites/default/files/01-s.png' />
-                {/* <Typography>{hour.WeatherIcon}</Typography> */}
-              </Grid>
-              <Grid item>
-                <Typography variant='h5'>
-                  {hour.Temperature.Value}
-                  &deg;
-                </Typography>
-              </Grid>
-              <Grid item>
-                <Typography variant='h5' color='blue'>
-                  {hour.PrecipitationProbability}
-                  %
-                </Typography>
-              </Grid>
-            </Grid>
+          <Grid key={hour.Time} xs={2} item>
+            <HourItem hour={hour} />
           </Grid>
         ))}
       </Grid>

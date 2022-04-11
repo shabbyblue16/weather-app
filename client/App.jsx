@@ -11,7 +11,7 @@ function App() {
     <RecoilRoot>
       <QueryClientProvider client={queryClient}>
         <AppContainer />
-        <ReactQueryDevtools initialIsOpen />
+        <ReactQueryDevtools />
       </QueryClientProvider>
     </RecoilRoot>
   );
