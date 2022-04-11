@@ -7,19 +7,19 @@ import useApiCall from './queries';
 import hourlyForecast from './fixtures/hourlyForecast.json';
 
 function HourlyForecast() {
-  // const {
-  //   data,
-  //   isLoading,
-  //   error,
-  //   isIdle,
-  // } = useApiCall();
+  const {
+    data,
+    isLoading,
+    error,
+    isIdle,
+  } = useApiCall();
 
-  // if (isLoading) return 'Loading...';
+  if (isLoading) return 'Loading...';
 
-  // if (error) return `An error has occured: ${error.message}`;
+  if (error) return `An error has occured: ${error.message}`;
 
-  // if (isIdle) return <div>Enter ZipCode</div>;
-  const data = { hourlyForecast };
+  if (isIdle) return <div />;
+  // const data = { hourlyForecast };
 
   return (
     <Box sx={{
@@ -30,19 +30,17 @@ function HourlyForecast() {
     >
       <Grid container columns={16}>
         {data.hourlyForecast.map((hour) => (
-          <Grid key={hour.EpochDateTime} xs={2} item>
+          <Grid key={hour.Time} xs={2} item>
             <Grid container direction='column' spacing={1} alignItems='center'>
               <Grid item>
-                {/* <Typography>{hour.DateTime}</Typography> */}
-                <Typography variant='h5'>3PM</Typography>
+                <Typography variant='h5'>{hour.Time}</Typography>
               </Grid>
               <Grid item>
-                <img alt='icon' src='https://developer.accuweather.com/sites/default/files/01-s.png' />
-                {/* <Typography>{hour.WeatherIcon}</Typography> */}
+                <img alt='icon' src={hour.WeatherIcon} />
               </Grid>
               <Grid item>
                 <Typography variant='h5'>
-                  {hour.Temperature.Value}
+                  {hour.TemperatureValue}
                   &deg;
                 </Typography>
               </Grid>

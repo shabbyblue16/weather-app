@@ -5,28 +5,28 @@ import Typography from '@mui/material/Typography';
 
 function DayItem({ day }) {
   return (
-    <Grid container spacing={15}>
+    <Grid container spacing={5}>
       <Grid item>
-        {/* <Typography>{day.Date}</Typography> */}
-        <Typography variant='h4'>Friday</Typography>
+        <Typography variant='h4'>{day.Date}</Typography>
       </Grid>
       <Grid item>
-        {/* <div>{day.Day.Icon}</div> */}
         <Typography variant='h4'>
-          <img alt='icon' src='https://developer.accuweather.com/sites/default/files/01-s.png' />
+          <img alt='icon' src={day.DayIcon} />
         </Typography>
       </Grid>
       <Grid item>
         <Typography variant='h4'>
-          {day.Temperature.Maximum.Value}
+          {day.TemperatureMaxVal}
           &deg;/
-          {day.Temperature.Minimum.Value}
+          {day.TemperatureMinVal}
           &deg;
         </Typography>
       </Grid>
-      {/* <Grid item>
-      <div>Precipitation</div>
-    </Grid> */}
+      <Grid item>
+        <Typography variant='h4'>
+          <img alt='icon' src={day.NightIcon} />
+        </Typography>
+      </Grid>
     </Grid>
   );
 }

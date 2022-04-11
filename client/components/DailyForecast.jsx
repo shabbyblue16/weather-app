@@ -7,25 +7,32 @@ import dailyForecast from './fixtures/dailyForecast.json';
 import DayItem from './DayItem';
 
 function DailyForecast() {
-  // const {
-  //   data,
-  //   isLoading,
-  //   error,
-  //   isIdle,
-  // } = useApiCall();
+  const {
+    data,
+    isLoading,
+    error,
+    isIdle,
+  } = useApiCall();
 
-  // if (isLoading) return 'Loading...';
+  if (isLoading) return <Typography>Loading...</Typography>;
 
-  // if (error) return `An error has occured: ${error.message}`;
+  if (error) {
+    return (
+      <Typography>
+        An error has occured:
+        {error.message}
+      </Typography>
+    );
+  }
 
-  // if (isIdle) return <div>Daily Weather</div>;
-  const data = { dailyForecast };
+  if (isIdle) return <Typography>Enter Zip Code</Typography>;
+  // const data = { dailyForecast };
 
   return (
     <Box sx={{ mt: 10, mr: 10, background: 'rgb(0, 0, 0, 0.5)' }}>
       <Grid container direction='column' columns={14} spacing={4} alignItems='center'>
-        {data.dailyForecast.DailyForecasts.map((day) => (
-          <Grid key={day.EpochDate} item xs={2}>
+        {data.dailyForecast.map((day) => (
+          <Grid key={day.Date} item xs={2}>
             <DayItem day={day} />
           </Grid>
         ))}

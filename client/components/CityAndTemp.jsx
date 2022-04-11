@@ -7,23 +7,23 @@ import hourlyForecast from './fixtures/hourlyForecast.json';
 import location from './fixtures/location.json';
 
 function CityAndTemp() {
-  // const {
-  //   data,
-  //   isLoading,
-  //   isIdle,
-  //   error,
-  // } = useApiCall();
+  const {
+    data,
+    isLoading,
+    isIdle,
+    error,
+  } = useApiCall();
 
-  // if (isLoading) return 'Loading...';
+  if (isLoading) return <Typography>Loading...</Typography>;
 
-  // if (error) return `An error has occured: ${error.message}`;
+  if (error) return `An error has occured: ${error.message}`;
 
-  // if (isIdle) return <div>Enter ZipCode</div>;
+  if (isIdle) return <div />;
 
-  const data = {
-    location,
-    hourlyForecast,
-  };
+  // const data = {
+  //   location,
+  //   hourlyForecast,
+  // };
 
   return (
     <Container component='div'>
@@ -32,12 +32,12 @@ function CityAndTemp() {
           <Typography variant='h6' gutterBottom>
             {data.location.EnglishName}
             {', '}
-            {data.location.AdministrativeArea.EnglishName}
+            {data.location.AdministrativeArea}
           </Typography>
         </Grid>
         <Grid item>
           <Typography variant='h1'>
-            {data.hourlyForecast[0].Temperature.Value}
+            {data.hourlyForecast[0].TemperatureValue}
             &deg;
           </Typography>
         </Grid>

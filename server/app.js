@@ -1,6 +1,6 @@
 const path = require('path');
 const express = require('express');
-const { getLocationKey, getForecast } = require('./helpers');
+const getWeather = require('./controllers');
 
 const app = express();
 app.use('/', express.static(path.join(__dirname, '/../client/dist')));
@@ -19,27 +19,7 @@ app.use((req, res, next) => {
 app.get('/weather/:zip?', (req, res) => {
   const { zip } = req.params;
   if (zip) {
-    const response = {};
-    let locationKey;
-
-    getLocationKey(zip)
-      .then((data) => {
-        [response.location] = data;
-        locationKey = data[0].Key;
-        return getForecast(locationKey, 'daily');
-      })
-      .then((data) => {
-        response.dailyForecast = data;
-        return getForecast(locationKey, 'hourly');
-      })
-      .then((data) => {
-        response.hourlyForecast = data;
-        res.status(200).json(response);
-      })
-      .catch((err) => {
-        console.log(err);
-        res.status(400).send(err);
-      });
+    getWeather(req, res, zip);
   }
 });
 
