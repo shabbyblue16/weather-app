@@ -36,12 +36,14 @@ function SearchBar() {
       }}
     >
       <InputBase
+        inputProps={{ 'data-testid': 'search-input' }}
         placeholder='Search 5-digit ZIP Codes'
         value={input}
         onChange={handleInput}
         sx={{ ml: 1, flex: 1, color: 'white' }}
       />
       <IconButton
+        data-testid='search-submit'
         onClick={handleSearch}
         sx={{ p: '10px', color: 'white' }}
         aria-label='search'
