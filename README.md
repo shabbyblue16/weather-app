@@ -3,7 +3,7 @@ A simple weather app that allows the user to search by ZIP Code for local weathe
 
 ## Demo
 Here is a visual representation of the app:
-![Weather-app](https://user-images.githubusercontent.com/55521671/162960969-e56877fd-a1b8-46e7-9f29-4a9ea71c25c5.png))
+![Weather-app](https://user-images.githubusercontent.com/55521671/163068587-d2e20d8a-5299-4730-83fa-a7d8bce0e940.png)
 
 ## Usage
 
@@ -39,7 +39,7 @@ To view linting problems, in a new terminal window, run `npm run lint`
 ### Technical Challenges
 The building of this app presented an opportunity to reevaluate my working understanding of the relationship between client state and server state. My go to set up would be for the client to fetch data from the server and then store response data in client state, often with a state managment framework like Redux. React-query requires a different approach.
 
-The biggest challenge in creating this app was my own lack of understanding for what react-query does, and how powerful it can be. I was using react-query to fetch data from the server and then attempting to store that data with recoil, but since react-query caches that data there isn't any need to set server data in client state. I can define the same query in multiple components without worry of redundant api calls. Recoil sticks to handling client state. One of those a-ha moments that can make developing, and learning in general, so exhilerating. Makes for some really clean code as well.
+The biggest challenge in creating this app was my own lack of understanding for what react-query does, and how powerful it can be. I was using react-query to fetch data from the server and then attempting to store that data with recoil, but since react-query caches that data there isn't any need to set server data in client state. I can define the same query in multiple components without worry of redundant api calls. Recoil sticks to handling client state. One of those a-ha moments that can make developing, and learning in general, so exhilarating. Makes for some really clean code as well.
 
 ![Screenshot from 2022-04-12 07-42-33](https://user-images.githubusercontent.com/55521671/162953597-b04c44ab-4e21-4ae4-80bb-69a2f5585fe0.png)
 
