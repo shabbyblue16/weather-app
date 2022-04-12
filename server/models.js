@@ -5,7 +5,7 @@ function DayModel(data) {
   const dailyForecast = data.DailyForecasts.map((day) => {
     const NewDate = new Date(day.Date);
     const Weekday = week[NewDate.getDay()];
-    const DayAndMonth = `${NewDate.getMonth()}/${NewDate.getDate() + 1}`;
+    const DayAndMonth = `${NewDate.getMonth() + 1}/${NewDate.getDate()}`;
     const DayIcon = day.Day.Icon < 10 ? `0${day.Day.Icon}-s.png` : `${day.Day.Icon}-s.png`;
     const NightIcon = day.Night.Icon < 10 ? `0${day.Night.Icon}-s.png` : `${day.Night.Icon}-s.png`;
     const sanitizedDay = {

@@ -16,6 +16,10 @@ export default function useApiCall() {
   return useQuery(
     ['local-weather', zipCode],
     () => fetchWeather(zipCode),
-    { enabled },
+    {
+      enabled,
+      staleTime: 60 * 30000,
+      cacheTime: 60 * 30000,
+    },
   );
 }

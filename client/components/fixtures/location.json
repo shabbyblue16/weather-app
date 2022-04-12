@@ -16,15 +16,7 @@
     "LocalizedName": "United States",
     "EnglishName": "United States"
   },
-  "AdministrativeArea": {
-    "ID": "NC",
-    "LocalizedName": "North Carolina",
-    "EnglishName": "North Carolina",
-    "Level": 1,
-    "LocalizedType": "State",
-    "EnglishType": "State",
-    "CountryID": "US"
-  },
+  "AdministrativeArea": "North Carolina",
   "TimeZone": {
     "Code": "EDT",
     "Name": "America/New_York",
