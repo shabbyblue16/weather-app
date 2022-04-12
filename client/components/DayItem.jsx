@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography';
 
 function DayItem({ day }) {
   return (
-    <Grid container spacing={10}>
+    <Grid container spacing={14}>
       <Grid item>
         <Typography variant='h4'>{day.Weekday}</Typography>
       </Grid>
