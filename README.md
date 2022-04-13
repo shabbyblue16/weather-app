@@ -3,7 +3,7 @@ A simple weather app that allows the user to search by ZIP Code for local weathe
 
 ## Demo
 Here is a visual representation of the app:
-![Weather-app](https://user-images.githubusercontent.com/55521671/163068587-d2e20d8a-5299-4730-83fa-a7d8bce0e940.png)
+![Weather-app](https://user-images.githubusercontent.com/55521671/163090266-a247910f-02ef-45a9-9bfe-a4252dec067f.png)
 
 ## Usage
 
