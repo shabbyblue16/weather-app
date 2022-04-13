@@ -15,6 +15,9 @@ function DayModel(data) {
       NightIcon: `${iconUrl}/${NightIcon}`,
       TemperatureMaxVal: day.Temperature.Maximum.Value,
       TemperatureMinVal: day.Temperature.Minimum.Value,
+      Precipitation: day.Day.PrecipitationProbability,
+      Phrase: day.Day.LongPhrase,
+      UVIndex: day.AirAndPollen[5].Value,
     };
     return sanitizedDay;
   });
