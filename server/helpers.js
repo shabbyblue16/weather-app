@@ -15,7 +15,7 @@ async function getForecast(key, interval) {
   } else {
     intervalStr = 'hourly/12hour';
   }
-  const { data } = await axios.get(`${url}/forecasts/v1/${intervalStr}/${key}?apikey=${process.env.API_KEY}`);
+  const { data } = await axios.get(`${url}/forecasts/v1/${intervalStr}/${key}?apikey=${process.env.API_KEY}&details=true`);
   return data;
 }
 

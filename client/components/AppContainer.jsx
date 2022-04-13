@@ -39,7 +39,14 @@ function AppContainer() {
       >
         <Typography>
           Powered by&nbsp;
-          <Link href='https://developer.accuweather.com/' sx={{ textDecoration: 'none' }}>AccuWeather API</Link>
+          <Link
+            href='https://developer.accuweather.com/'
+            underline='none'
+            target='_blank'
+            rel='noopener'
+          >
+            AccuWeather API
+          </Link>
         </Typography>
       </AppBar>
     </Paper>

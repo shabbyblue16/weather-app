@@ -8,7 +8,7 @@ function SearchContainer() {
   return (
     <Box>
       <Grid container direction='column' alignItems='center' sx={{ height: '100%' }}>
-        <Grid item sx={{ pt: 5, pb: 50 }}>
+        <Grid item sx={{ pt: 5, pb: 40 }}>
           <SearchBar />
         </Grid>
         <Grid item>

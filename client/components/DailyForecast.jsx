@@ -30,7 +30,7 @@ function DailyForecast() {
     <Box sx={{ mt: 10, mr: 10, background: 'rgb(0, 0, 0, 0.5)' }}>
       <Grid container direction='column' columns={10} spacing={8} alignItems='center'>
         {data.dailyForecast.map((day) => (
-          <Grid key={day.Date} item xs={2}>
+          <Grid key={day.Date} item xs={2} sx={{ width: '100%' }}>
             <DayItem day={day} />
           </Grid>
         ))}
