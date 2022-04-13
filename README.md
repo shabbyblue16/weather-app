@@ -1,5 +1,5 @@
 # Weather App
-A simple weather app that allows the user to search by ZIP Code for local weather forecasts.
+A weather app that allows the user to search by ZIP Code for local weather forecasts, including data for temperature, precipitation and UV index.
 
 ## Demo
 Here is a visual representation of the app:
