@@ -28,13 +28,18 @@ To view linting problems, in a new terminal window, run `npm run lint`
 ## Developement
 
 ### Tech Stack
-[React](https://reactjs.org/)\
-[MaterialUI](https://mui.com/)\
-[Recoil](https://recoiljs.org/)\
-[React-query](https://react-query.tanstack.com/)\
-[Node](https://nodejs.org/en/about/)\
-[Express](https://expressjs.com/)\
-[Jest](https://jestjs.io/)
+
+---
+[![image](https://user-images.githubusercontent.com/55521671/163092979-4792a35a-8be1-4728-b135-92ea32fbc22c.png)](https://reactjs.org/)\
+[![image](https://user-images.githubusercontent.com/55521671/163093168-8e404de0-6006-4a16-a1e1-e181e9c76315.png)](https://mui.com/)\
+[![image](https://user-images.githubusercontent.com/55521671/163093547-e769c8dc-4c9e-4088-945c-ff4432bc6830.png)](https://recoiljs.org/)\
+[![image](https://user-images.githubusercontent.com/55521671/163093588-50f7013b-c9de-4607-b3f1-048330c07d1d.png)\
+](https://react-query.tanstack.com/)
+[![image](https://user-images.githubusercontent.com/55521671/163093943-c324a52d-466f-4fa4-8c7e-17bd6358bc00.png)](https://nodejs.org/en/about/)\
+[![image](https://user-images.githubusercontent.com/55521671/163093505-11a9f986-188a-46b3-9eca-539d398e2aae.png)](https://expressjs.com/)\
+[![image](https://user-images.githubusercontent.com/55521671/163093376-4d52105c-900e-4a5b-ac0c-d8587bfba280.png)](https://jestjs.io/)
+
+---
 
 ### Technical Challenges
 The building of this app presented an opportunity to reevaluate my working understanding of the relationship between client state and server state. My go to set up would be for the client to fetch data from the server and then store response data in client state, often with a state managment framework like Redux. React-query requires a different approach.
